@@ -8,7 +8,7 @@ import time
 from urllib.parse import urlparse
 
 # Edit this to adjust how many HTTP requests you can make in parallel
-CONCURRENT_REQUESTS = 20
+CONCURRENT_REQUESTS = 200
 PROTOCOL_PATTERN = re.compile(r'^\w+://')
 DOMAIN_PATTERN = re.compile(r'^[^:]+://([^/:]+)')
 
@@ -43,7 +43,7 @@ async def worker(file, output, options):
             url = line.strip()
             try:
                 status = await get_status(session, url)
-                writer.writerow([url, status])
+                writer.writerow([Status:'status, ' <br><a href='url'>'url'</br>'])
             except Exception as error:
                 writer.writerow([url, f'ERROR: {error}'])
 
