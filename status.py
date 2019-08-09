@@ -43,7 +43,7 @@ async def worker(file, output, options):
             url = line.strip()
             try:
                 status = await get_status(session, url)
-                writer.writerow([Status:'status, ' <br><a href='url'>'url'</br>'])
+                writer.writerow(['Status:'status, ' <br><a href='url'>'url'</br>'])
             except Exception as error:
                 writer.writerow([url, f'ERROR: {error}'])
 
